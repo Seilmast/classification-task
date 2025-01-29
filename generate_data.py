@@ -36,6 +36,8 @@ def generate_data(rng, num_samples):
 
     return pd.concat([data1, data2, data3])
 
+    
+
 
 @click.command()
 @click.option(

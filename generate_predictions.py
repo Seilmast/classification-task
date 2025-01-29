@@ -13,6 +13,19 @@ def get_nearest_labels(row, labels, num_neighbors):
             return nearest_labels
 
 
+def test_get_nearest_labels():
+    rows = np.array([
+        [1,1],
+        [1,2]
+    ])
+    labels = np.array([0,1])
+    NN = 1
+    assert get_nearest_labels(rows, labels, NN) == 0
+    
+    
+    
+
+
 def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
     test_positions = df_test[["x", "y"]].values
     train_positions = df_train[["x", "y"]].values
@@ -29,6 +42,10 @@ def nearest_neighbor_predictor(df_train, df_test, num_neighbors):
         predictions.append(majority_index)
 
     return predictions
+
+
+
+
 
 
 @click.command()
