@@ -10,7 +10,7 @@ def get_nearest_labels(row, labels, num_neighbors):
     for _distance, label in sorted(zip(row, labels)):
         nearest_labels.append(label)
         if len(nearest_labels) == num_neighbors:
-            return nearest_labels + 1
+            return nearest_labels
 
 
 def test_get_nearest_labels():
